@@ -1,3 +1,13 @@
+/**
+ * The point of this is to do something like
+ * ```js
+ * const formData = formDataToJson(
+ *   new FormData(formRef.current!)
+ * ) as FormShape;
+ * ```
+ * Since this uses `name` attributes as sources of truth,
+ * we use `satisfies InputName` to validate these.
+ */
 interface FormShape {
   username: string;
   password: string;
